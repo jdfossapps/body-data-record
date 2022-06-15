@@ -1,0 +1,92 @@
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/preferences_activity_body_data_preferences">
+
+        <EditTextPreference
+            android:defaultValue="@string/default_weightUnitOfMeasure"
+            android:icon="@drawable/ic_weight_scale"
+            app:key="weightUnitOfMeasure"
+            app:title="@string/preferences_activity_unit_of_measure_for_weight"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:defaultValue="@string/default_lengthUnitOfMeasure"
+            android:icon="@drawable/ic_ruler"
+            app:key="lengthUnitOfMeasure"
+            app:title="@string/preferences_activity_unit_of_measure_for_length"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:defaultValue="@string/default_temperatureUnitOfMeasure"
+            android:icon="@drawable/ic_clock"
+            app:key="abbreviationForMinutes"
+            app:title="@string/preferences_activity_unit_of_measure_for_temperature"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:defaultValue=""
+            android:icon="@drawable/ic_clock"
+            app:key="temperatureUnitOfMeasure"
+            app:title="@string/preferences_activity_abbreviation_for_minutes"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:defaultValue="@string/preferences_activity_default_bp_separator"
+            android:icon="@drawable/ic_horizontal_rule"
+            app:key="defaultBloodPressureSeparator"
+            app:title="@string/preferences_activity_default_bp_separator_title"
+            app:useSimpleSummaryProvider="true" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/preferences_activity_ui_preferences">
+        <SwitchPreferenceCompat
+            android:defaultValue="1"
+            android:icon="@drawable/ic_clock"
+            android:key="compareEmptyLastMealWithCurrentDate"
+            android:summary="@string/preferences_activity_compare_last_meal_entries_with_local_time"
+            android:title="@string/preferences_activity_compare_last_meal_pref_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/preferences_activity_pill_names">
+
+        <EditTextPreference
+            android:defaultValue="@string/default_Pill1Name"
+            android:icon="@drawable/ic_pill"
+            app:key="defaultPill1Name"
+            app:title="@string/preferences_activity_pill1_name"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:defaultValue="@string/default_Pill2Name"
+            android:icon="@drawable/ic_pill"
+            app:key="defaultPill2Name"
+            app:title="@string/preferences_activity_pill2_name"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:defaultValue="@string/default_Pill3Name"
+            android:icon="@drawable/ic_pill"
+            app:key="defaultPill3Name"
+            app:title="@string/preferences_activity_pill3_name"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:defaultValue="@string/default_Pill4Name"
+            android:icon="@drawable/ic_pill"
+            app:key="defaultPill4Name"
+            app:title="@string/preferences_activity_pill4_name"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:defaultValue="@string/default_Pill5Name"
+            android:icon="@drawable/ic_pill"
+            app:key="defaultPill5Name"
+            app:title="@string/preferences_activity_pill5_name"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

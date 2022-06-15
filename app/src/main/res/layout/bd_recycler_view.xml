@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:paddingBottom="2sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvInfoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5sp"
+            android:text=""
+            android:textStyle="bold"
+            app:drawableLeftCompat="@drawable/ic_weight_scale"
+            app:drawableStartCompat="@drawable/ic_weight_scale"
+            app:drawableTint="@color/button_grey"
+            app:suffixText="@string/default_weightUnitOfMeasure" />
+
+        <TextView
+            android:id="@+id/tvInfoTitle2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5sp"
+            android:text=""
+            android:textStyle="bold"
+            app:drawableLeftCompat="@drawable/ic_blood_pressure"
+            app:drawableStartCompat="@drawable/ic_blood_pressure"
+            app:drawableTint="@color/button_grey" />
+
+        <TextView
+            android:id="@+id/tvInfoTitle3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5sp"
+            android:gravity="right|end"
+            android:text=""
+            android:textStyle="bold"
+            app:drawableEndCompat="@drawable/ic_calendar"
+            app:drawableRightCompat="@drawable/ic_calendar"
+            app:drawableTint="@color/button_grey" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInfoSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5sp"
+        android:text=""
+        app:drawableLeftCompat="@drawable/ic_no_food"
+        app:drawableStartCompat="@drawable/ic_no_food"
+        app:drawableTint="@color/button_grey" />
+
+    <TextView
+        android:id="@+id/tvInfoSubTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5sp"
+        android:text=""
+        app:drawableLeftCompat="@drawable/ic_restaurant"
+        app:drawableStartCompat="@drawable/ic_restaurant"
+        app:drawableTint="@color/button_grey" />
+
+    <TextView
+        android:id="@+id/tvInfoSubTitle3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5sp"
+        android:text=""
+        app:drawableLeftCompat="@drawable/ic_breakfast"
+        app:drawableStartCompat="@drawable/ic_breakfast"
+        app:drawableTint="@color/button_grey" />
+
+    <TextView
+        android:id="@+id/tvInfoSubTitle4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5sp"
+        android:text=""
+        app:drawableLeftCompat="@drawable/ic_toilet_wc"
+        app:drawableStartCompat="@drawable/ic_toilet_wc"
+        app:drawableTint="@color/button_grey" />
+
+</LinearLayout>
