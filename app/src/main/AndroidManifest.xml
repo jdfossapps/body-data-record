@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BodyDataRecord">
+        <activity android:name=".CreateEditBodyDataActivity"
+            android:label="@string/activity_title_create_db_entry"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" >
+            <!-- Parent activity meta-data to support API level 4+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".SettingsActivity"
+            android:label="@string/activity_title_activity_settings"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" >
+            <!-- Parent activity meta-data to support API level 4+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".MainActivity" android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="org.jdfossapps.android.bodydatarecord.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+    </application>
+
+</manifest>

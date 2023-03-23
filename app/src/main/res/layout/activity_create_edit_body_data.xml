@@ -1,0 +1,1625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="0"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    tools:context=".CreateEditBodyDataActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfBDWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_create_edit_weight"
+                app:boxBackgroundMode="none"
+                app:startIconTint="@color/button_grey"
+                app:suffixText="@string/default_weightUnitOfMeasure">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputBDEditWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/activity_create_edit_insert_weight"
+                    android:drawableStart="@drawable/ic_weight_scale"
+                    android:drawableLeft="@drawable/ic_weight_scale"
+                    android:drawablePadding="15dp"
+
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfBDHeight"
+                app:boxBackgroundMode="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_create_edit_height"
+                app:suffixText="@string/default_lengthUnitOfMeasure">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputBDEditHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/activity_create_edit_insert_height"
+                    android:drawableStart="@drawable/ic_height"
+                    android:drawableLeft="@drawable/ic_height"
+                    android:drawablePadding="15dp"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfBDWaist"
+                app:boxBackgroundMode="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_create_edit_waist"
+                app:suffixText="@string/default_lengthUnitOfMeasure">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputBDEditWaist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/activity_create_edit_insert_waist_size"
+                    android:drawableStart="@drawable/ic_ruler"
+                    android:drawableLeft="@drawable/ic_ruler"
+                    android:drawablePadding="15dp"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfBDChest"
+                app:boxBackgroundMode="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_create_edit_chest"
+                app:suffixText="@string/default_lengthUnitOfMeasure">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputBDEditChest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/activity_create_edit_insert_chest_size"
+                    android:drawableStart="@drawable/ic_ruler"
+                    android:drawableLeft="@drawable/ic_ruler"
+                    android:drawablePadding="15dp"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDHeartSystole1"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_systole_1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditHeartSystole1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_systole_1_value"
+                        android:drawableStart="@drawable/ic_blood_pressure"
+                        android:drawableLeft="@drawable/ic_blood_pressure"
+                        android:drawablePadding="15dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDHeartDiastole1"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_diastole_1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditHeartDiastole1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_diastole_1_value"
+                        android:drawableStart="@drawable/ic_blood_pressure"
+                        android:drawableLeft="@drawable/ic_blood_pressure"
+                        android:drawablePadding="15dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDHeartRate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="@string/activity_create_edit_heart_rate_1"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditHeartRate1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_heart_rate_value_1"
+                        android:drawableStart="@drawable/ic_heart_rate"
+                        android:drawableLeft="@drawable/ic_heart_rate"
+                        android:drawablePadding="15dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTBloodPressure1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:hint="@string/activity_create_edit_blood_pressure_date_1"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTBloodPressure1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_blood_pressure_1"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTBloodPressure1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDHeartSystole2"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_systole_2">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditHeartSystole2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_systole_2_value"
+                        android:drawableStart="@drawable/ic_blood_pressure"
+                        android:drawableLeft="@drawable/ic_blood_pressure"
+                        android:drawablePadding="15dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDHeartDiastole2"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_diastole_2">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditHeartDiastole2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_diastole_2_value"
+                        android:drawableStart="@drawable/ic_blood_pressure"
+                        android:drawableLeft="@drawable/ic_blood_pressure"
+                        android:drawablePadding="15dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDHeartRate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="@string/activity_create_edit_heart_rate_2"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditHeartRate2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_heart_rate_value_1"
+                        android:drawableStart="@drawable/ic_heart_rate"
+                        android:drawableLeft="@drawable/ic_heart_rate"
+                        android:drawablePadding="15dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTBloodPressure2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:hint="@string/activity_create_edit_blood_pressure_date_2"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTBloodPressure2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_blood_pressure_2"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTBloodPressure2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDHeartSystole3"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_systole_3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditHeartSystole3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_systole_3_value"
+                        android:drawableStart="@drawable/ic_blood_pressure"
+                        android:drawableLeft="@drawable/ic_blood_pressure"
+                        android:drawablePadding="15dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDHeartDiastole3"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_diastole_3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditHeartDiastole3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_diastole_3_value"
+                        android:drawableStart="@drawable/ic_blood_pressure"
+                        android:drawableLeft="@drawable/ic_blood_pressure"
+                        android:drawablePadding="15dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDHeartRate3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="@string/activity_create_edit_heart_rate_3"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditHeartRate3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_heart_rate_value_1"
+                        android:drawableStart="@drawable/ic_heart_rate"
+                        android:drawableLeft="@drawable/ic_heart_rate"
+                        android:drawablePadding="15dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTBloodPressure3"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:hint="@string/activity_create_edit_blood_pressure_date_3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTBloodPressure3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_blood_pressure_3"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTBloodPressure3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDHeartSystole4"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_systole_4">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditHeartSystole4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_systole_4_value"
+                        android:drawableStart="@drawable/ic_blood_pressure"
+                        android:drawableLeft="@drawable/ic_blood_pressure"
+                        android:drawablePadding="15dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDHeartDiastole4"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_diastole_4">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditHeartDiastole4"
+                        app:boxBackgroundMode="none"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_diastole_4_value"
+                        android:drawableStart="@drawable/ic_blood_pressure"
+                        android:drawableLeft="@drawable/ic_blood_pressure"
+                        android:drawablePadding="15dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDHeartRate4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="@string/activity_create_edit_heart_rate_4"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditHeartRate4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_heart_rate_value_1"
+                        android:drawableStart="@drawable/ic_heart_rate"
+                        android:drawableLeft="@drawable/ic_heart_rate"
+                        android:drawablePadding="15dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTBloodPressure4"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:hint="@string/activity_create_edit_blood_pressure_date_4">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTBloodPressure4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_blood_pressure_4"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTBloodPressure4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDHeartSystole5"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_systole_5">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditHeartSystole5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_systole_5_value"
+                        android:drawableStart="@drawable/ic_blood_pressure"
+                        android:drawableLeft="@drawable/ic_blood_pressure"
+                        android:drawablePadding="15dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDHeartDiastole5"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_diastole_5">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditHeartDiastole5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_diastole_5_value"
+                        android:drawableStart="@drawable/ic_blood_pressure"
+                        android:drawableLeft="@drawable/ic_blood_pressure"
+                        android:drawablePadding="15dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDHeartRate5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="@string/activity_create_edit_heart_rate_5"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditHeartRate5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_heart_rate_value_1"
+                        android:drawableStart="@drawable/ic_heart_rate"
+                        android:drawableLeft="@drawable/ic_heart_rate"
+                        android:drawablePadding="15dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTBloodPressure5"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:hint="@string/activity_create_edit_blood_pressure_date_5">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTBloodPressure5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_blood_pressure_5"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTBloodPressure5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTPill1"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_pill_1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTPill1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_pill_1"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTPill1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTPill2"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_pill_2">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTPill2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_pill_2"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTPill2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTPill3"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_pill_3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTPill3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_pill_3"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTPill3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTPill4"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_pill_4">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTPill4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_pill_4"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTPill4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTPill5"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_pill_5">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTPill5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_pill_5"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTPill5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDTemperature1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="@string/activity_create_edit_temperature_1"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditTemperature1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_temperature_value_1"
+                        android:drawableStart="@drawable/ic_sick"
+                        android:drawableLeft="@drawable/ic_sick"
+                        android:drawablePadding="15dp"
+                        app:suffixText="@string/default_temperatureUnitOfMeasure"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTTemperature1"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:hint="@string/activity_create_edit_temperature_date_1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTTemperature1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_temperature_1"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTTemperature1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDTemperature2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="@string/activity_create_edit_temperature_2"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditTemperature2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_temperature_value_2"
+                        android:drawableStart="@drawable/ic_sick"
+                        android:drawableLeft="@drawable/ic_sick"
+                        android:drawablePadding="15dp"
+                        app:suffixText="@string/default_temperatureUnitOfMeasure"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTTemperature2"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:hint="@string/activity_create_edit_temperature_date_2">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTTemperature2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_temperature_2"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTTemperature2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDTemperature3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="@string/activity_create_edit_temperature_3"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditTemperature3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_temperature_value_3"
+                        android:drawableStart="@drawable/ic_sick"
+                        android:drawableLeft="@drawable/ic_heart_rate"
+                        android:drawablePadding="15dp"
+                        app:suffixText="@string/default_temperatureUnitOfMeasure"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTTemperature3"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:hint="@string/activity_create_edit_temperature_date_3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTTemperature3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_temperature_3"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTTemperature3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDTemperature4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="@string/activity_create_edit_temperature_4"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditTemperature4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_temperature_value_4"
+                        android:drawableStart="@drawable/ic_sick"
+                        android:drawableLeft="@drawable/ic_sick"
+                        android:drawablePadding="15dp"
+                        app:suffixText="@string/default_temperatureUnitOfMeasure"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTTemperature4"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:hint="@string/activity_create_edit_temperature_date_4">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTTemperature4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_temperature_4"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTTemperature4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDTemperature5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="@string/activity_create_edit_temperature_5"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditTemperature5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_temperature_value_5"
+                        android:drawableStart="@drawable/ic_sick"
+                        android:drawableLeft="@drawable/ic_heart_rate"
+                        android:drawablePadding="15dp"
+                        app:suffixText="@string/default_temperatureUnitOfMeasure"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTTemperature5"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:hint="@string/activity_create_edit_temperature_date_5">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTTemperature5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_temperature_5"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTTemperature5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfBDBloodGlucose1"
+                app:boxBackgroundMode="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_create_edit_blood_glucose_1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputBDEditBloodGlucose1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/activity_create_edit_insert_blood_glucose_1_value"
+                    android:drawableStart="@drawable/ic_sugar_blood"
+                    android:drawableLeft="@drawable/ic_sugar_blood"
+                    android:drawablePadding="15dp"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfBDBloodGlucose2"
+                app:boxBackgroundMode="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_create_edit_blood_glucose_2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputBDEditBloodGlucose2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/activity_create_edit_insert_blood_glucose_2_value"
+                    android:drawableStart="@drawable/ic_sugar_blood"
+                    android:drawableLeft="@drawable/ic_sugar_blood"
+                    android:drawablePadding="15dp"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfBDBloodGlucose3"
+                app:boxBackgroundMode="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_create_edit_blood_glucose_3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputBDEditBloodGlucose3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/activity_create_edit_insert_blood_glucose_3_value"
+                    android:drawableStart="@drawable/ic_sugar_blood"
+                    android:drawableLeft="@drawable/ic_sugar_blood"
+                    android:drawablePadding="15dp"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfBDBloodGlucose4"
+                app:boxBackgroundMode="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_create_edit_blood_glucose_4">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputBDEditBloodGlucose4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/activity_create_edit_insert_blood_glucose_4_value"
+                    android:drawableStart="@drawable/ic_sugar_blood"
+                    android:drawableLeft="@drawable/ic_sugar_blood"
+                    android:drawablePadding="15dp"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfBDBloodGlucose5"
+                app:boxBackgroundMode="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_create_edit_blood_glucose_5">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputBDEditBloodGlucose5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/activity_create_edit_insert_blood_glucose_5_value"
+                    android:drawableStart="@drawable/ic_sugar_blood"
+                    android:drawableLeft="@drawable/ic_sugar_blood"
+                    android:drawablePadding="15dp"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfBDCholesterol"
+                app:boxBackgroundMode="none"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_create_edit_cholesterol">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputBDEditCholesterol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/activity_create_edit_insert_cholesterol_value"
+                    android:drawableStart="@drawable/ic_fastfood_french_fries"
+                    android:drawableLeft="@drawable/ic_fastfood_french_fries"
+                    android:drawablePadding="15dp"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfBDCReactiveProtein"
+                app:boxBackgroundMode="none"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_create_edit_c_reactive_protein">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputBDEditCReactiveProtein"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/activity_create_edit_insert_c_reactive_protein_value"
+                    android:drawableStart="@drawable/ic_tube"
+                    android:drawableLeft="@drawable/ic_tube"
+                    android:drawablePadding="15dp"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfBDExerciseMinutes"
+                app:boxBackgroundMode="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_create_edit_exercise_minutes"
+                app:suffixText="@string/default_abbreviationForMinutes">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputBDEditExerciseMinutes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/activity_create_edit_insert_minutes_of_exercise"
+                    android:drawableStart="@drawable/ic_exercise"
+                    android:drawableLeft="@drawable/ic_exercise"
+                    android:drawablePadding="15dp"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfBDExerciseDescription"
+                app:boxBackgroundMode="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_create_edit_exercise_description">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputBDEditExerciseDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/activity_create_edit_insert_description_of_exercise"
+                    android:drawableStart="@drawable/ic_exercise"
+                    android:drawableLeft="@drawable/ic_exercise"
+                    android:drawablePadding="15dp"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTLastMeal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_date_and_time_of_last_meal"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTLastMeal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_date_and_time_of_last_meal"
+                        android:drawableStart="@drawable/ic_time_calendar"
+                        android:drawableLeft="@drawable/ic_time_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTLastMealClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:contentDescription="@string/activity_create_edit_clear"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+                    app:tint="@color/button_grey" />
+                <ImageView
+                    android:id="@+id/btnSetNowDTLastMeal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTBreakfast"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_date_and_time_of_breakfast">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTBreakfast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_date_and_time_of_your_breakfast"
+                        android:drawableStart="@drawable/ic_time_calendar"
+                        android:drawableLeft="@drawable/ic_time_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTBreakfastAtClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_clear"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+                    app:tint="@color/button_grey" />
+                <ImageView
+                    android:id="@+id/btnSetNowDTBreakfastAt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTSleptAt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_date_and_time_of_slept_at"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTSleptAt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_date_and_time_of_slept_at"
+                        android:drawableStart="@drawable/ic_time_calendar"
+                        android:drawableLeft="@drawable/ic_time_calendar"
+                        android:drawableEnd="@drawable/ic_night_shelter"
+                        android:drawableRight="@drawable/ic_night_shelter"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTSleptAt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTWakeupAt"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_date_and_time_of_wakeup">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTWakeupAt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_date_and_time_of_your_wakeup"
+                        android:drawableStart="@drawable/ic_time_calendar"
+                        android:drawableLeft="@drawable/ic_time_calendar"
+                        android:drawableEnd="@drawable/ic_sun"
+                        android:drawableRight="@drawable/ic_sun"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTWakeupAt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTBathroom1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_date_and_time_of_bathroom_1_at"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTBathroom1At"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_date_and_time_of_bathroom_1_at"
+                        android:drawableStart="@drawable/ic_time_calendar"
+                        android:drawableLeft="@drawable/ic_time_calendar"
+                        android:drawableEnd="@drawable/ic_toilet_wc"
+                        android:drawablePadding="15dp"
+                        android:inputType="none"
+                        android:drawableRight="@drawable/ic_toilet_wc" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTBathroom1At"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+           <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTBathroom2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_date_and_time_of_bathroom_2_at"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTBathroom2At"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_date_and_time_of_bathroom_2_at"
+                        android:drawableStart="@drawable/ic_time_calendar"
+                        android:drawableLeft="@drawable/ic_time_calendar"
+                        android:drawableEnd="@drawable/ic_toilet_wc"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTBathroom2At"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+            -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tfBDDTRecordDate"
+                    app:boxBackgroundMode="none"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/activity_create_edit_record_date">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBDEditDTRecordDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_create_edit_insert_record_date"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawablePadding="15dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/btnSetNowDTRecordDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/activity_create_edit_set_to_now"
+                    android:foregroundGravity="center_vertical"
+                    app:srcCompat="@drawable/ic_flash"
+                    app:tint="@color/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutActionButtons"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btnBDDelete"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_create_edit_delete"
+                    app:icon="@android:drawable/ic_menu_delete" />
+
+                <Button
+                    android:id="@+id/btnBDSave"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_create_edit_save"
+                    app:icon="@android:drawable/ic_menu_save" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

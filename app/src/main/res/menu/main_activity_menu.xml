@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/ic_refresh"
+        android:title="@string/main_activity_menu_refresh"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_export_csv"
+        android:icon="@drawable/ic_export_upload"
+        android:title="@string/main_activity_menu_export_csv"
+        app:showAsAction="ifRoom" />
+    <!-- Settings, should always be in the overflow -->
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,116 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 33
+    //buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "org.jdfossapps.android.bodydatarecord"
+        namespace "org.jdfossapps.android.bodydatarecord"
+        minSdkVersion 14
+        targetSdkVersion 33
+        versionCode 1
+        versionName "0.0.1"
+        vectorDrawables.useSupportLibrary = true
+        //testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //For Room Kotlin
+        kapt {
+            arguments {
+                arg("room.schemaLocation", "$projectDir/schemas".toString())
+                arg("room.incremental", "true")
+                arg("room.expandProjection", "true")
+            }
+        }
+
+    }
+
+    signingConfigs {
+
+        release {
+            storeFile file("$rootDir/jdfossapps.keystore")
+            storePassword System.getenv("ANDROID_RELEASE_STORE_PASSWORD").toString() ?: ""
+            keyAlias System.getenv("ANDROID_RELEASE_KEY_ALIAS").toString() ?: ""
+            keyPassword System.getenv("ANDROID_RELEASE_KEY_PASSWORD").toString() ?: ""
+
+            // Optional, specify signing 	versions used
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+}
+
+task addCurrentDate() {
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def date = new Date().format("ddMMyyyyhhmmss")
+            def fileName = "body-data-record" + "-" + variant.name + "-" +
+                    variant.versionName + "-" + variant.versionCode + "-" + date + ".apk"
+            output.outputFileName = fileName
+        }
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.preference:preference:1.1.1'
+    /*testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'*/
+
+    // ROOM PERSISTENCE
+    def room_version = "2.3.0"
+    def sqlite_version = "2.1.0"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version" // optional - Kotlin Extensions and Coroutines support for Room
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.sqlite:sqlite:$sqlite_version"
+    // END PERSISTENCE
+
+    // ViewModel and LiveData
+    def lifecycle_version = "2.3.1"
+    def lifecycle_extensions_version = "2.2.0"
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    implementation "androidx.core:core-ktx:1.6.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_extensions_version"
+
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1"
+
+    //implementation "androidx.activity:activity:1.3.0-rc01"
+    //implementation "androidx.fragment:fragment:1.4.0-alpha04"
+
+}
